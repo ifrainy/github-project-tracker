@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f5">
+  <meta name="description" content="每日发现值得关注的 GitHub 实用工具、学习资料和免费资源目录。">
+  <title>开源雷达 · GitHub 项目追踪</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#top" aria-label="开源雷达首页">
+        <span class="brand-mark"><span></span><span></span><span></span><span></span></span>
+        <span class="brand-name">开源<span>雷达</span></span>
+      </a>
+      <div class="side-label">探索</div>
+      <nav class="side-nav" aria-label="项目分类">
+        <button class="nav-item active" data-category="all"><span class="nav-icon">◫</span>今日精选<span class="nav-count" id="count-all">0</span></button>
+        <button class="nav-item" data-category="tools"><span class="nav-icon">⌘</span>实用工具<span class="nav-count" id="count-tools">0</span></button>
+        <button class="nav-item" data-category="learning"><span class="nav-icon">▤</span>学习资料<span class="nav-count" id="count-learning">0</span></button>
+        <button class="nav-item" data-category="resources"><span class="nav-icon">▧</span>资源目录<span class="nav-count" id="count-resources">0</span></button>
+        <button class="nav-item" data-category="saved"><span class="nav-icon">♡</span>我的收藏<span class="nav-count" id="count-saved">0</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="free-note"><span class="free-note-icon">✳</span><div><b>永久免费</b><small>开源数据 · 无需注册</small></div></div>
+        <a class="github-link" href="https://github.com" target="_blank" rel="noopener">由 GitHub 开源社区驱动 <span>↗</span></a>
+      </div>
+    </aside>
+
+    <main id="top" class="main-content">
+      <header class="topbar">
+        <div class="breadcrumb"><span>发现</span><i>/</i><b id="crumb-current">今日精选</b></div>
+        <div class="top-actions"><span class="updated-label"><span class="live-dot"></span><span id="sync-label">连接数据中</span></span><a class="top-github" href="https://github.com" target="_blank" rel="noopener">GitHub <span>↗</span></a></div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy"><div class="eyebrow"><span class="eyebrow-line"></span>OPEN SOURCE, HANDPICKED</div>
+          <h1>好项目，不再<br><em>擦肩而过。</em></h1>
+          <p>每天为你整理值得一试的开源工具、学习资料与资源目录。<br class="desktop-break">简单发现，放心收藏，保持追踪。</p>
+          <div class="hero-stats"><div><strong id="stat-total">—</strong><span>本次收录</span></div><span class="stat-divider"></span><div><strong id="stat-categories">3</strong><span>精选分类</span></div><span class="stat-divider"></span><div><strong>免费</strong><span>网站使用</span></div></div>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><div class="radar-center"><span class="radar-cross horizontal"></span><span class="radar-cross vertical"></span><span class="radar-sweep"></span><span class="radar-core"></span></div><span class="radar-point point-a"></span><span class="radar-point point-b"></span><span class="radar-point point-c"></span><span class="radar-caption">SCANNING PUBLIC REPOS</span></div>
+      </section>
+
+      <section class="toolbar" aria-label="搜索和筛选">
+        <label class="search-box"><span class="search-icon">⌕</span><input id="search-input" type="search" placeholder="搜索项目名称、描述或语言…" autocomplete="off"><kbd>⌘ K</kbd></label>
+        <div class="toolbar-controls"><label class="select-wrap"><span class="sr-only">排序方式</span><select id="sort-select"><option value="stars">按受欢迎度</option><option value="updated">最近更新</option><option value="name">名称 A–Z</option></select><span>⌄</span></label><button id="refresh-button" class="icon-button" title="重新读取数据" aria-label="重新读取数据">↻</button></div>
+      </section>
+
+      <section class="results-heading"><div><div class="section-kicker">THE COLLECTION</div><h2 id="section-title">今日精选 <span id="result-count">0</span></h2></div><div class="result-meta"><span id="data-status" class="status-pill"><span></span>等待同步</span><span class="result-date" id="result-date">数据载入中</span></div></section>
+      <div id="notice" class="notice" hidden></div>
+      <section id="project-grid" class="project-grid" aria-live="polite"></section>
+      <section id="empty-state" class="empty-state" hidden><div class="empty-symbol">⌕</div><h3 id="empty-title">还没有发现项目</h3><p id="empty-description">第一次更新后，精选项目会出现在这里。</p><button id="empty-refresh" class="button-primary">重新读取</button></section>
+
+      <footer class="footer"><div><span class="footer-mark">✳</span> 用开放的方式，发现好东西。</div><div><span id="footer-update">DATA SOURCE: GITHUB REST API</span><a href="https://docs.github.com/en/rest" target="_blank" rel="noopener">API 文档 ↗</a></div></footer>
+    </main>
+  </div>
+  <script src="app.js" defer></script>
+</body>
+</html>
+
