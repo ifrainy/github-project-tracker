@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "max_search_requests": 6,
+  "per_page": 20,
+  "seed_repositories": [
+    {"full_name": "hluk/CopyQ", "category": "tools", "reason": "剪贴板管理工具，追踪新版本。"},
+    {"full_name": "Stirling-Tools/Stirling-PDF", "category": "tools", "reason": "PDF 与 OCR 工具，留意部署条件和功能变化。"},
+    {"full_name": "localsend/localsend", "category": "tools", "reason": "跨设备文件传输工具。"},
+    {"full_name": "microsoft/PowerToys", "category": "tools", "reason": "Windows 效率工具合集。"},
+    {"full_name": "affaan-m/ECC", "category": "resources", "reason": "Agent 技能与开发工作流资源。"},
+    {"full_name": "kepano/obsidian-skills", "category": "resources", "reason": "Obsidian 与知识管理相关技能。"},
+    {"full_name": "EbookFoundation/free-programming-books", "category": "resources", "reason": "免费编程书籍目录；外链条件需逐项核对。"},
+    {"full_name": "microsoft/ML-For-Beginners", "category": "learning", "reason": "机器学习课程与练习项目。"},
+    {"full_name": "public-apis/public-apis", "category": "resources", "reason": "公开 API 目录；具体 API 额度以原站为准。"},
+    {"full_name": "awesome-selfhosted/awesome-selfhosted", "category": "resources", "reason": "自托管软件目录；部署可能需要自备设备或服务器。"}
+  ],
+  "searches": [
+    {"category": "tools", "q": "topic:windows topic:productivity stars:>100 archived:false fork:false"},
+    {"category": "tools", "q": "topic:ocr stars:>100 archived:false fork:false"},
+    {"category": "learning", "q": "topic:learning-resources stars:>300 archived:false fork:false"},
+    {"category": "learning", "q": "machine learning course tutorial stars:>300 archived:false fork:false"},
+    {"category": "resources", "q": "topic:awesome-list stars:>300 archived:false fork:false"},
+    {"category": "resources", "q": "free books resources in:description stars:>100 archived:false fork:false"}
+  ]
+}
+
